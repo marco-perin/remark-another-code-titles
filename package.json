@@ -1,30 +1,57 @@
 {
-  "name": "root",
-  "private": true,
-  "version": "0.0.0",
+  "name": "remark-another-code-titles",
+  "version": "0.1.0",
   "type": "module",
-  "scripts": {
-    "lint": "prettier \"**/*.{js,ts,md,mjs,cjs,json}\"",
-    "dev": "pnpm --filter './packages/**' run dev",
-    "format": "pnpm run lint --write",
-    "build": "pnpm --filter './packages/**' run build",
-    "test": "pnpm -r test"
-  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kevinzunigacuellar/remark-code-title",
-    "directory": "packages/remark-code-title"
+    "url": "https://github.com/marco-perin/remark-another-code-titles"
   },
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevinzunigacuellar/remark-code-title/issues"
+    "url": "https://github.com/marco-perin/remark-another-code-titles/issues"
   },
-  "homepage": "https://github.com/kevinzunigacuellar/remark-code-title#readme",
+  "homepage": "https://github.com/marco-perin/remark-another-code-titles#README",
+  "description": "Customizable remark plugin to add titles to code blocks",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "prettier \"**/*.{js,ts,md,mjs,cjs,json}\"",
+    "dev": "vitest",
+    "format": "pnpm run lint --write",
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "test": "vitest run"
+  },
+  "author": {
+    "name": "Marco Perin",
+    "url": "https://marco-perin.com"
+  },
+  "keywords": [
+    "remark-plugin",
+    "remark",
+    "mdast"
+  ],
+  "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.7.1"
-  },
-  "dependencies": {
+    "@types/mdast": "^3.0.10",
+    "remark": "^14.0.2",
+    "remark-html": "^14.0.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3",
+    "unified": "^10.1.2",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3",
+    "prettier": "^2.7.1",
     "@changesets/changelog-github": "^0.4.7",
     "@changesets/cli": "^2.25.2"
+  },
+  "dependencies": {
+    "unist-util-visit": "^4.1.1"
   }
 }

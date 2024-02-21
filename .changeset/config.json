@@ -2,7 +2,9 @@
   "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
   "changelog": [
     "@changesets/cli/changelog",
-    { "repo": "kevinzunigacuellar/remark-code-title" }
+    {
+      "repo": "marco-perin/remark-another-code-titles"
+    }
   ],
   "commit": false,
   "fixed": [],

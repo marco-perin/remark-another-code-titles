@@ -7,7 +7,7 @@ import { Options } from "./types/types";
 const defaultOptions: Options = {
   // Use Attribute by default to keep backwards compatibility
   useClassInsteadOfAttribute: false,
-  baseName: "data-remark-code-title",
+  baseName: "data-remark-another-code-titles",
 };
 
 function mergeOptions(
@@ -58,7 +58,7 @@ export const remarkCodeTitle: unified.Plugin<
         "",
       ];
       if (!title && metaString.includes("title=")) {
-        file.message("Invalid title", node, "remark-code-title");
+        file.message("Invalid title", node, "remark-another-code-titles");
         return;
       }
       if (!title) return;
