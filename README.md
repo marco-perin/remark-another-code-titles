@@ -101,7 +101,11 @@ And finally, `additionalClasses="additional-class"` or `additionalClasses=["addi
 
 ```html
 <h1>Example</h1>
-<div data-remark-another-code-titles class="additional-class" data-language="js">
+<div
+  data-remark-another-code-titles
+  class="additional-class"
+  data-language="js"
+>
   example.js
 </div>
 <pre>

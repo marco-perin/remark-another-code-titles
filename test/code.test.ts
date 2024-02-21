@@ -188,7 +188,9 @@ test("tests html execution using class instead of attribute", async () => {
 
   const result = await processor.process(md);
   expect(result.toString()).toContain(title);
-  expect(result.toString()).not.toContain("<div data-remark-another-code-titles");
+  expect(result.toString()).not.toContain(
+    "<div data-remark-another-code-titles"
+  );
   expect(result.toString()).toContain(`<div class="${baseName}"`);
 });
 
@@ -217,7 +219,9 @@ test("tests html execution using class instead of attribute with an additional c
 
   const result = await processor.process(md);
   expect(result.toString()).toContain(title);
-  expect(result.toString()).not.toContain("<div data-remark-another-code-titles");
+  expect(result.toString()).not.toContain(
+    "<div data-remark-another-code-titles"
+  );
   expect(result.toString()).toContain(
     `<div class="${baseName} ${additionalClasses}"`
   );
@@ -248,7 +252,9 @@ test("tests html execution using class instead of attribute with an additional c
 
   const result = await processor.process(md);
   expect(result.toString()).toContain(title);
-  expect(result.toString()).not.toContain("<div data-remark-another-code-titles");
+  expect(result.toString()).not.toContain(
+    "<div data-remark-another-code-titles"
+  );
   expect(result.toString()).toContain(
     `<div class="${baseName} ${additionalClasses}"`
   );
